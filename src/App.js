@@ -1,5 +1,6 @@
 import React from 'react';
 import List from './List.js';
+import './App.css'
 
 class App extends React.Component {
   render() {
@@ -9,7 +10,6 @@ class App extends React.Component {
         return this.props.store.allCards.filter(cardID)
       })*/
     let storeList = Object.keys(this.props.store.lists)
-    let cards = Object.keys(this.props.store.allCards)
     return (
       <main className='App'>
         <header className="App-header">
@@ -21,6 +21,7 @@ class App extends React.Component {
               let cardArrays = this.props.store.lists[list].cardIds
               return <List 
               key={this.props.store.lists[list].id}
+              id={this.props.store.lists[list].id}
               header={this.props.store.lists[list].header}
               cards={cardArrays.map(id => this.props.store.allCards[id])} />
               })
