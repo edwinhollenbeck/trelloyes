@@ -4,11 +4,6 @@ import './App.css'
 
 class App extends React.Component {
   render() {
-    /*let listProps = Object.keys(this.props.store.lists).map((list) => {
-      let header = list.header
-      let cards = this.props.store.lists[list].cardIDs.map((cardID) => {
-        return this.props.store.allCards.filter(cardID)
-      })*/
     let storeList = Object.keys(this.props.store.lists)
     return (
       <main className='App'>
